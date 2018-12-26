@@ -9,7 +9,7 @@
       "android"
     ],
     "androidStatusBar": {
-      "backgroundColor": "green"
+      "backgroundColor": "#3f8756"
     },
     "version": "1.0.0",
     "orientation": "portrait",
