@@ -7,8 +7,6 @@ import {
     TouchableHighlight }
     from 'react-native';
 
-const logo = require('./src/imgs/logo.png');
-
 export default class SobreJogo extends React.Component {
     render() {
         return (
@@ -27,6 +25,7 @@ const styles = StyleSheet.create({
 
     txtDetalhes:{
         fontSize: 16,
+        flex: 1
     },
 
 });
