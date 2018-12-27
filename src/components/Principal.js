@@ -1,10 +1,10 @@
 import React from 'react';
 import {
     StyleSheet,
-    Text,
     View,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
+    Text,
 } from 'react-native';
 
 const logo = require('../imgs/logo.png');
@@ -33,14 +33,14 @@ export default class Principal extends React.Component {
                     </TouchableHighlight>
                 </View>
 
-                <View style={styles.containerBtnSobre}>
+                <View style={styles.rodape}>
 
                     <TouchableHighlight
                         underlayColor={'#61BD8C'}
                         activeOpacity={0.3}
                         onPress={() => {alert('Sobre o Jogo')}}
                     >
-                        <Image source={sobreJogo} style={styles.menuBtn}/>
+                        <Image source={sobreJogo} />
                     </TouchableHighlight>
 
                     <TouchableHighlight
@@ -48,7 +48,7 @@ export default class Principal extends React.Component {
                         activeOpacity={0.3}
                         onPress={() => {alert('Outros Jogos')}}
                     >
-                        <Image source={outrosJogos} style={styles.menuBtn}/>
+                        <Image source={outrosJogos} />
                     </TouchableHighlight>
                 </View>
 
@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#61BD8C',
     },
-
     barTitle:{
         height: 40,
         backgroundColor: 'white',
@@ -80,16 +79,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flex: 10,
-        marginTop: 100,
     },
 
-    containerBtnSobre:{
+    rodape:{
         flexDirection: 'row',
-        justifyContent: 'center',
-        marginTop: 160,
+        justifyContent: 'space-between',
+        flex: 1
     },
 
-    menuBtn:{
-        margin: 30
-    }
 });
