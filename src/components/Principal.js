@@ -7,6 +7,10 @@ import {
     Text,
 } from 'react-native';
 
+import {
+    Actions,
+} from 'react-native-router-flux';
+
 const logo = require('../imgs/logo.png');
 const btnJogar = require('../imgs/botao_jogar.png');
 const outrosJogos = require('../imgs/outros_jogos.png');
@@ -27,7 +31,7 @@ export default class Principal extends React.Component {
                     <TouchableHighlight
                         underlayColor={'#61BD8C'}
                         activeOpacity={0.3}
-                        onPress={() => {alert('Iniciado o jogo');}}
+                        onPress={() => {Actions.resultado();}}
                     >
                         <Image source={btnJogar}/>
                     </TouchableHighlight>
@@ -38,7 +42,7 @@ export default class Principal extends React.Component {
                     <TouchableHighlight
                         underlayColor={'#61BD8C'}
                         activeOpacity={0.3}
-                        onPress={() => {alert('Sobre o Jogo')}}
+                        onPress={() => { Actions.sobrejogo();}}
                     >
                         <Image source={sobreJogo} />
                     </TouchableHighlight>
@@ -46,7 +50,7 @@ export default class Principal extends React.Component {
                     <TouchableHighlight
                         underlayColor={'#61bd8c'}
                         activeOpacity={0.3}
-                        onPress={() => {alert('Outros Jogos')}}
+                        onPress={() => {Actions.outrosjogos();}}
                     >
                         <Image source={outrosJogos} />
                     </TouchableHighlight>
@@ -63,7 +67,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#61BD8C',
     },
     barTitle:{
-        height: 40,
+        height: 45,
         backgroundColor: 'white',
     },
 
@@ -72,7 +76,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginTop: 5,
+        marginTop: 10,
     },
 
     containerBtnLogo:{
