@@ -10,7 +10,7 @@ import {
     Actions,
 } from 'react-native-router-flux';
 
-const btnVoltar = require('../imgs/arrow_left.png');
+const btnBack = require('../imgs/arrow_left.png');
 const moedaCara = require('../imgs/moeda_cara.png');
 const moedaCoroa = require('../imgs/moeda_coroa.png');
 
@@ -41,20 +41,20 @@ export default class Resultado extends React.Component {
     render() {
             return (
                 <View style={styles.viewContainer}>
-                    <View style={styles.navBar}>
-                        <View style={styles.spaceIn}>
-                            <TouchableHighlight
-                                underlayColor={'#fff'}
-                                activeOpacity={0.3}
-                                onPress={() => {Actions.pop()}}
-                            >
+                    <View style={styles.navBarStyle}>
+                        <TouchableHighlight
+                            underlayColor={'#fff'}
+                            activeOpacity={0.3}
+                            onPress= {() => {
+                                Actions.pop()
+                            }}
+                        >
                             <Image
-                                source={btnVoltar}
-                                style={styles.btnVoltar}
+                                source={btnBack}
+                                style={styles.btnBackStyle}
                             />
-                            </TouchableHighlight>
-                            <Text style={styles.txtTitle}>Resultado</Text>
-                        </View>
+                        </TouchableHighlight>
+                        <Text style={styles.titleStyle}>Resultado</Text>
                     </View>
                     <View style={styles.resultado}>
                         {this.state.resultado === 'cara' ?
@@ -78,34 +78,27 @@ const styles = StyleSheet.create({
         backgroundColor: '#61BD8C',
     },
 
-    navBar: {
-        height: 45,
-        backgroundColor: 'white',
+    navBarStyle: {
+        backgroundColor: '#fff',
         padding: 10,
-    },
-
-    txtTitle: {
-        color: '#61BD8C',
-        fontSize: 18,
-        fontWeight: 'bold',
-        justifyContent: 'center',
-        marginTop: 0,
-        marginLeft: 120,
-        alignItems: 'center',
-        flex: 1
-    },
-
-    spaceIn: {
+        height: 50,
         flexDirection: 'row',
     },
 
-    btnVoltar: {
+    titleStyle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#61BD8C',
+        textAlign: 'center',
+        flex: 1,
+        marginTop: 2,
+        marginRight: 40,
+    },
+
+    btnBackStyle: {
+        flex: 1,
         height: 35,
         width: 35,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        flex: 1,
-        marginLeft: -10
     },
 
     txtDetalhes:{
