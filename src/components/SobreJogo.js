@@ -31,10 +31,17 @@ export default class SobreJogo extends React.Component {
                             style={styles.btnBackStyle}
                         />
                     </TouchableHighlight>
-                    <Text style={styles.titleStyle}>Sobre o jogo</Text>
+                    <Text
+                        style={styles.titleStyle}>Sobre o jogo</Text>
                 </View>
 
-                <Text style={styles.txtDetalhes}>Aqui podem ser apresentadas informações sobre o jogo.</Text>
+                <Text
+                    style={styles.txtDetalhes}
+                >
+                    O Jogo Cara ou Coroa é um exercício desenvolvido pelo curso de React Native, para aprendizado e
+                    aprimoramento de conhecimento durante o curso. Nesse aplicativo eu aprendi a ultilizar o componente
+                    router flux como meio de navegtação entre as telas do aplicativo.
+                </Text>
             </View>
         );
     }
@@ -72,7 +79,9 @@ const styles = StyleSheet.create({
     txtDetalhes: {
         fontSize: 16,
         flex: 1,
-        marginTop: 5
+        textAlign: 'center',
+        margin: 12,
+        fontWeight: 'bold',
     },
 
 });
