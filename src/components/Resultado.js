@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
         padding: 10,
         height: 50,
         flexDirection: 'row',
+        elevation: 5
     },
 
     titleStyle: {

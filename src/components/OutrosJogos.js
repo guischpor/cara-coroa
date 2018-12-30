@@ -13,7 +13,7 @@ import {
     Actions,
 } from 'react-native-router-flux';
 
-const btnBack = require('../imgs/arrow_left.png');
+const btnBack = require('../imgs/arrow_left_white.png');
 
 export default class OutrosJogos extends React.Component {
     constructor(props) {
@@ -50,7 +50,7 @@ export default class OutrosJogos extends React.Component {
 
                 <View style={styles.navBarStyle}>
                     <TouchableHighlight
-                        underlayColor={'#fff'}
+                        underlayColor={'#04a0e6'}
                         activeOpacity={0.3}
                         onPress= {() => {
                             Actions.pop()
@@ -74,9 +74,54 @@ export default class OutrosJogos extends React.Component {
                                 keyExtractor={item => item.id}
                                 renderItem={({item, index}) =>
                                 <View style={styles.styleList}>
-                                    <Image source={item.logoGame} style={{borderTopRightRadius: 30, borderTopLeftRadius: 30,}}/>
-                                    <Text style={{textAlign:'center', marginTop: 5, marginBottom: 5,}}>{item.name}</Text>
-                                    <Text style={{textAlign:'center'}}>{item.description}</Text>
+                                    <Image
+                                        source={item.logoGame}
+                                        style={{
+                                            borderTopRightRadius: 30,
+                                            borderTopLeftRadius: 30,
+                                        }}
+                                    />
+                                    <Text
+                                        style={{
+                                            textAlign:'center',
+                                            marginTop: 5,
+                                            marginBottom: 5,
+                                            fontWeight: 'bold',
+                                            fontSize: 18
+                                        }}>
+                                        {item.name}
+                                    </Text>
+                                    <Text
+                                        style={{
+                                            textAlign:'center',
+                                            margin: 5
+                                        }}>
+                                        {item.description}
+                                    </Text>
+                                    <TouchableHighlight
+                                        underlayColor={'#04a0e6'}
+                                        activeOpacity={0.3}
+                                        onPress= {() => alert('Jogo')}
+                                        style={{
+                                            borderBottomLeftRadius: 30,
+                                            borderBottomRightRadius: 30,
+                                        }}
+                                    >
+                                    <Text
+                                    style={{
+                                        textAlign:'center',
+                                        backgroundColor: '#04a0e6',
+                                        padding: 12,
+                                        borderBottomLeftRadius: 30,
+                                        borderBottomRightRadius: 30,
+                                        color: '#fff',
+                                        fontWeight: 'bold',
+                                        fontSize: 20
+                                    }}
+                                    >
+                                        Obter Jogo
+                                    </Text>
+                                    </TouchableHighlight>
                                 </View>
                                 }
                             />
@@ -91,21 +136,22 @@ export default class OutrosJogos extends React.Component {
 const styles = StyleSheet.create({
     viewContainer: {
         flex: 1,
-        backgroundColor: '#61BD8C',
+        backgroundColor: '#fff',
         marginBottom: 20
     },
 
     navBarStyle: {
-        backgroundColor: '#fff',
+        backgroundColor: '#04a0e6',
         padding: 10,
         height: 50,
         flexDirection: 'row',
+        elevation: 5
     },
 
     titleStyle: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#61BD8C',
+        color: '#fff',
         textAlign: 'center',
         flex: 1,
         marginTop: 2,
@@ -127,19 +173,19 @@ const styles = StyleSheet.create({
     },
 
     styleList: {
-        backgroundColor: '#fff',
+        backgroundColor: '#a9dfea',
         height: 320,
         width: 320,
         marginTop: 10,
         marginBottom: 10,
         borderRadius: 30,
+        elevation: 5
     },
 
     listContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#61BD8C',
     },
 
 });

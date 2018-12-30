@@ -64,11 +64,12 @@ export default class Principal extends React.Component {
 const styles = StyleSheet.create({
     viewContainer: {
         flex: 1,
-        backgroundColor: '#61BD8C',
+        backgroundColor: '#2a7a9a',
     },
     barTitle:{
         height: 45,
         backgroundColor: 'white',
+        elevation: 5
     },
 
     txtTitle:{

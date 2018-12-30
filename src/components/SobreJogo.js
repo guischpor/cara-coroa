@@ -11,7 +11,7 @@ import {
     Actions,
 } from 'react-native-router-flux';
 
-const btnBack = require('../imgs/arrow_left.png');
+const btnBack = require('../imgs/arrow_left_white.png');
 
 export default class SobreJogo extends React.Component {
     render() {
@@ -20,7 +20,7 @@ export default class SobreJogo extends React.Component {
 
                 <View style={styles.navBarStyle}>
                     <TouchableHighlight
-                        underlayColor={'#fff'}
+                        underlayColor={'#61BD8C'}
                         activeOpacity={0.3}
                         onPress= {() => {
                             Actions.pop()
@@ -50,20 +50,21 @@ export default class SobreJogo extends React.Component {
 const styles = StyleSheet.create({
     viewContainer: {
         flex: 1,
-        backgroundColor: '#61BD8C',
+        backgroundColor: '#fff',
     },
 
     navBarStyle: {
-        backgroundColor: '#fff',
+        backgroundColor: '#61BD8C',
         padding: 10,
         height: 50,
         flexDirection: 'row',
+        elevation: 5
     },
 
     titleStyle: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#61BD8C',
+        color: '#fff',
         textAlign: 'center',
         flex: 1,
         marginTop: 2,
