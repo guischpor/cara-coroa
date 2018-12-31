@@ -20,7 +20,7 @@ export default class SobreJogo extends React.Component {
 
                 <View style={styles.navBarStyle}>
                     <TouchableHighlight
-                        underlayColor={'#61BD8C'}
+                        underlayColor={'#0155b1'}
                         activeOpacity={0.3}
                         onPress= {() => {
                             Actions.pop()
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     },
 
     navBarStyle: {
-        backgroundColor: '#61BD8C',
+        backgroundColor: '#0155b1',
         padding: 10,
         height: 50,
         flexDirection: 'row',

@@ -7,7 +7,6 @@ import {
     Image,
     ScrollView,
     FlatList,
-    TouchableOpacity
 } from 'react-native';
 import {
     Actions,
@@ -38,6 +37,18 @@ export default class OutrosJogos extends React.Component {
                     name: 'Brawl Stars',
                     description: 'Batalhas agitadas multijogador dos mesmos criadores de Clash of Clans, Clash Royale e Boom Beach!',
                 },
+                {
+                    id: 3,
+                    logoGame: require('../imgs/jogo_04_red.jpg'),
+                    name: 'Empires and Allies',
+                    description: 'Junte-se aos amigos, forme alianças, construa seu exército e prepare-se para a batalha. Entre nessa aventura, batalhe conosco.',
+                },
+                {
+                    id: 4,
+                    logoGame: require('../imgs/jogo_05_red.jpg'),
+                    name: 'Clash Royale',
+                    description: 'Entre na arena! Os criadores do Clash of Clans trazem um jogo multijogador em tempo real com os Royales.',
+                },
             ],
             list: []
         };
@@ -50,7 +61,7 @@ export default class OutrosJogos extends React.Component {
 
                 <View style={styles.navBarStyle}>
                     <TouchableHighlight
-                        underlayColor={'#04a0e6'}
+                        underlayColor={'#0155b1'}
                         activeOpacity={0.3}
                         onPress= {() => {
                             Actions.pop()
@@ -99,7 +110,7 @@ export default class OutrosJogos extends React.Component {
                                         {item.description}
                                     </Text>
                                     <TouchableHighlight
-                                        underlayColor={'#04a0e6'}
+                                        underlayColor={'#0155b1'}
                                         activeOpacity={0.3}
                                         onPress= {() => alert('Jogo')}
                                         style={{
@@ -110,7 +121,7 @@ export default class OutrosJogos extends React.Component {
                                     <Text
                                     style={{
                                         textAlign:'center',
-                                        backgroundColor: '#04a0e6',
+                                        backgroundColor: '#0155b1',
                                         padding: 12,
                                         borderBottomLeftRadius: 30,
                                         borderBottomRightRadius: 30,
@@ -141,7 +152,7 @@ const styles = StyleSheet.create({
     },
 
     navBarStyle: {
-        backgroundColor: '#04a0e6',
+        backgroundColor: '#0155b1',
         padding: 10,
         height: 50,
         flexDirection: 'row',
@@ -173,7 +184,7 @@ const styles = StyleSheet.create({
     },
 
     styleList: {
-        backgroundColor: '#a9dfea',
+        backgroundColor: '#77aef9',
         height: 320,
         width: 320,
         marginTop: 10,

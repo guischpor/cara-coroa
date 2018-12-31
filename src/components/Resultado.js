@@ -10,7 +10,7 @@ import {
     Actions,
 } from 'react-native-router-flux';
 
-const btnBack = require('../imgs/arrow_left.png');
+const btnBack = require('../imgs/arrow_left_white.png');
 const moedaCara = require('../imgs/moeda_cara.png');
 const moedaCoroa = require('../imgs/moeda_coroa.png');
 
@@ -43,7 +43,7 @@ export default class Resultado extends React.Component {
                 <View style={styles.viewContainer}>
                     <View style={styles.navBarStyle}>
                         <TouchableHighlight
-                            underlayColor={'#fff'}
+                            underlayColor={'#0155b1'}
                             activeOpacity={0.3}
                             onPress= {() => {
                                 Actions.pop()
@@ -75,11 +75,11 @@ export default class Resultado extends React.Component {
 const styles = StyleSheet.create({
     viewContainer: {
         flex: 1,
-        backgroundColor: '#61BD8C',
+        backgroundColor: '#77aef9',
     },
 
     navBarStyle: {
-        backgroundColor: '#fff',
+        backgroundColor: '#0155b1',
         padding: 10,
         height: 50,
         flexDirection: 'row',
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     titleStyle: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#61BD8C',
+        color: '#fff',
         textAlign: 'center',
         flex: 1,
         marginTop: 2,
